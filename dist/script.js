@@ -64,6 +64,7 @@ if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.match
 }
 const alert = document.getElementById("alert");
 const button = document.getElementById("submit");
+const nama = document.getElementById("name");
 
 button.addEventListener("click", () => {
   alert.classList.remove("hidden");
