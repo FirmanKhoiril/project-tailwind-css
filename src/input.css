@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "inter", sans-serif;
+}
+
+.burger {
+  @apply my-2 block h-[2px] w-[30px] bg-dark dark:bg-white;
+}
+
+.navbar-fixed {
+  @apply fixed z-[9999] bg-slate-100 bg-opacity-90 backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.burger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.burger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.burger-active > span:nth-child(3) {
+  @apply origin-bottom-left -rotate-45;
+}
+
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-3;
+}
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+.carousel-item {
+  -webkit-transition: opacity 0.6s ease-in-out;
+  transition: opacity 0.6s ease-in-out;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3,
+#carousel-4:checked ~ .control-4,
+#carousel-5:checked ~ .control-5,
+#carousel-6:checked ~ .control-6,
+#carousel-7:checked ~ .control-7,
+#carousel-8:checked ~ .control-8,
+#carousel-9:checked ~ .control-9,
+#carousel-10:checked ~ .control-10,
+#carousel-11:checked ~ .control-11,
+#carousel-12:checked ~ .control-12,
+#carousel-13:checked ~ .control-13,
+#carousel-14:checked ~ .control-14,
+#carousel-15:checked ~ .control-15 {
+  display: block;
+}
+
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 12;
+}
+.slider figure div {
+  float: left;
+  width: 20%;
+}
+.slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  animation: animate 40s infinite;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+#carousel-4:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet,
+#carousel-5:checked ~ .control-5 ~ .carousel-indicators li:nth-child(5) .carousel-bullet,
+#carousel-6:checked ~ .control-6 ~ .carousel-indicators li:nth-child(6) .carousel-bullet,
+#carousel-7:checked ~ .control-7 ~ .carousel-indicators li:nth-child(7) .carousel-bullet,
+#carousel-8:checked ~ .control-8 ~ .carousel-indicators li:nth-child(8) .carousel-bullet,
+#carousel-9:checked ~ .control-9 ~ .carousel-indicators li:nth-child(9) .carousel-bullet,
+#carousel-10:checked ~ .control-10 ~ .carousel-indicators li:nth-child(10) .carousel-bullet,
+#carousel-11:checked ~ .control-11 ~ .carousel-indicators li:nth-child(11) .carousel-bullet,
+#carousel-12:checked ~ .control-12 ~ .carousel-indicators li:nth-child(12) .carousel-bullet,
+#carousel-13:checked ~ .control-13 ~ .carousel-indicators li:nth-child(13) .carousel-bullet,
+#carousel-14:checked ~ .control-14 ~ .carousel-indicators li:nth-child(14) .carousel-bullet,
+#carousel-15:checked ~ .control-15 ~ .carousel-indicators li:nth-child(15) .carousel-bullet {
+  color: #438ad6;
+  /*Set to match the Tailwind colour you want the active one to be */
+}
+@keyframes animate {
+  0% {
+    left: 0%;
+  }
+  10% {
+    left: 0%;
+  }
+  12% {
+    left: -100%;
+  }
+  14% {
+    left: -100%;
+  }
+  22% {
+    left: -100%;
+  }
+  24% {
+    left: -200%;
+  }
+  34% {
+    left: -200%;
+  }
+  36% {
+    left: -300%;
+  }
+  42% {
+    left: -300%;
+  }
+  46% {
+    left: -400%;
+  }
+  48% {
+    left: -400%;
+  }
+  56% {
+    left: -400%;
+  }
+  58% {
+    left: -400%;
+  }
+  60% {
+    left: -300%;
+  }
+  70% {
+    left: -300%;
+  }
+  72% {
+    left: -200%;
+  }
+  82% {
+    left: -200%;
+  }
+  84% {
+    left: -100%;
+  }
+  94% {
+    left: -100%;
+  }
+  96% {
+    left: 0%;
+  }
+}
