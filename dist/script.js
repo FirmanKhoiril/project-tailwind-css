@@ -63,10 +63,13 @@ if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.match
   darkToggle.checked = false;
 }
 const alert = document.getElementById("alert");
+const alertFail = document.getElementById("alertFail");
 const button = document.getElementById("submit");
 const nama = document.getElementById("name");
+const Form = document.getElementById("form");
+const formInput = document.querySelectorAll(".input");
 
-button.addEventListener("click", () => {
+button.addEventListener("click", function () {
   alert.classList.remove("hidden");
   button.preventDefault();
 });
