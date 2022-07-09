@@ -62,14 +62,20 @@ if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.match
 } else {
   darkToggle.checked = false;
 }
-const alert = document.getElementById("alert");
-const alertFail = document.getElementById("alertFail");
-const button = document.getElementById("submit");
-const nama = document.getElementById("name");
-const Form = document.getElementById("form");
-const formInput = document.querySelectorAll(".input");
 
-button.addEventListener("click", function () {
-  alert.classList.remove("hidden");
-  button.preventDefault();
-});
+const required = () => {
+  const input = document.querySelector(".input");
+  const message = document.getElementById("alert");
+  const failMessage = document.getElementById("alertFail");
+
+  if (input.value.length <= 8) {
+    failMessage.classList.remove("hidden");
+  } else {
+    failMessage.classList.add("hidden");
+  }
+  if (input.value.length >= 9) {
+    message.classList.remove("hidden");
+  } else {
+    message.classList.add("hidden");
+  }
+};
